@@ -17,3 +17,24 @@ sudo apt-get install nodejs
 node -v 
 
 #If the correct version number is displayed on the terminal, the installation of Node on your system was successful.
+
+
+
+Install Modules with npm install
+
+#Installing modules from the npm registry is one of the most basic things
+you should learn to do when getting started with npm. As you dive deeper,
+you'll begin to learn some variations on installing modules, 
+but here's the very core of what you need to know to install
+a standalone module into the current directory:
+
+$ npm install
+
+Once you run this, npm will begin installing all of the current project's dependencies
+
+What is npm run build?
+$ npm run build 
+#npm run build creates a build directory with a production build of your app. 
+
+
+
