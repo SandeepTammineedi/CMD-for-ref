@@ -1,0 +1,4 @@
+NGINX is most powerful webservers tool alternative to apache
+#install the NGINX in ubuntu
+
+Sudo apt install nginx
