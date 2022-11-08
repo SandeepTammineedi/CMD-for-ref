@@ -1,6 +1,37 @@
+1)
 #we can install 
 $ Sudo apt install docker.io
-#or run below to downlode the script and install 
+1a)#or run below to downlode the script and install 
 $ curl -fsSL https://get.docker.com -o get-docker.sh
 #this will downlode -get-docker.sh
+2)
 $ Sudo sh get-docker.sh
+
+3)
+now clone frontend code from github into vm using clone 
+$ git clone https://github.com/SandeepTammineedi/LMSFrontEndRepo
+
+4)
+after clone goto the cloned repo and use below cmd to check if the code is upto date or not 
+$ git pull
+
+5) 
+create a new branch for docker deployment 
+ git checkout docker-deployments
+this will create "dockerfil" in the curent directiry 
+6)
+open dockerfile (Vi dockerfile)  and coppy the below scrpt 
+
+# syntax=docker/dockerfile:1
+FROM node:16 AS Build
+WORKDIR /app
+COPY package.json packege-lock.json ./
+RUN npm install
+COPY . .
+RUN npm build
+
+FROM nginx:alpine
+Copy --from=build /app/dist /usr/share/nginx/html
+7)docker build 
+$ docker build --tag lmsclass
+
