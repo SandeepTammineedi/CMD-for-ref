@@ -1,0 +1,8 @@
+sudo -s mv html html.bak
+ sudo -s ln -s /home/azureuser/LMSFE/dist html
+ 
+ certbot:
+ step 1: sudo snap install core; sudo snap refresh core
+step 2: sudo snap install --classic certbot
+step 3: sudo ln -s /snap/bin/certbot /usr/bin/certbot
+setp 4: sudo certbot --nginx
