@@ -2,8 +2,9 @@
 #Step 1 - Add Node.js ppa
 #The Node.js package is available in the LTS release and the current release. It’s up to the user to select the version of Node that is required. Run the following command to add the PPA to the Ubuntu system:
 
-sudo apt-get install curl
+
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
 
 #Step 2 - Install Node.js on Ubuntu
 #After successfully adding the PPA to the system, execute the command below to install Node on Ubuntu:
