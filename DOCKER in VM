@@ -1,0 +1,6 @@
+#we can install 
+$ Sudo apt install docker.io
+#or run below to downlode the script and install 
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+#this will downlode -get-docker.sh
+$ Sudo sh get-docker.sh
