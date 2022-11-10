@@ -1,0 +1,58 @@
+
+    2  sudo apt-get update
+    3  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+    
+    4  sudo mkdir -p /etc/apt/keyrings
+    5  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+    6  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+   11  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+   12  sudo mkdir -p /etc/apt/keyrings
+   
+   13  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg       
+   
+   14  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+   15  sudo apt-get update
+   
+   16  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   
+   17  sudo docker run hello-world
+   
+   18  sudo groupadd docker
+
+   20  sudo usermod -aG docker azureuser
+   
+  ------------------ nginx----------------------------
+   23  sudo docker run nginx
+   
+   ------------------Attache port 80 to the docker image -------------------port=80
+  24 docker run -d -p 80:80 nginx
+   
+  25 docker ps 
+  26 docker image 
+    
+   
+   24  docker images
+   25  sudo docker images
+   -----------to stop contioner --------------
+   26 docker stop 34b74f15b583
+   -----------to remove cotainer --------------
+   27 docker rm 34b74f15b583
+   ----------------prosGres---------------port=5432
+   28 docker run postgres
+   29 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=password --name lmspgdb postgres
+   
+   --------------redis-------------------port=6379.
+   30 docker run redis
+   --------------mongodb------------------------port=27017
+   31 docker run --name lmsmongo -d mongo
+   -------------mongo-express--------------------port=
+   32 docker run -d mongo-express
+   -------------node --------------------------  port=
+   33 docker run node
+   
+   
