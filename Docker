@@ -44,7 +44,7 @@
    27 docker rm 34b74f15b583
    ----------------prosGres---------------port=5432
    28 docker run postgres
-   29 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=password --name lmspgdb postgres
+   29 docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=password --name lmspgdb --network lmsnetwork postgres
    
    --------------redis-------------------port=6379.
    30 docker run redis
@@ -67,7 +67,7 @@
    _________________________________________________________________For backend___________________________________________________
    _______________________________________________________________________________________________________________________________
    ----need to go to backend folder (api)-------
-   
+   backend container 
    37 docker build --tag lms-public-api .
    ---------------run postges----------------
   38 -e POSTGRES_PASSWORD=password --network lmsnetwork --name lmspgdb postgres 
