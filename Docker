@@ -24,7 +24,7 @@
    
    18  sudo groupadd docker
 
-   20  sudo usermod -aG docker azureuser
+   20  sudo usermod -aG docker azureuser -(always re login after this to take effect, so that we dont need to use 'sudo')
    
   ------------------ nginx----------------------------
    23  sudo docker run nginx
