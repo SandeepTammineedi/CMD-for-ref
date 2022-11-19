@@ -66,10 +66,15 @@
   39 docker run -p 8080:8080 --network lmsnetwork -e DATABASE_URL=postgresql://postgres:password@lmspgdb:5432/postgres -e MODE=local lms-public-api
    
    
+ ---------------------------------------------------------------------------------------  
+   ___________________Docker Compouse ________________________________
+   sudo apt-get update
+ 
+### Install docker and docker compose on Ubuntu
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ 
    
-   
-   
-   
+   docker compose up 
    
    
    
